@@ -460,6 +460,7 @@ footer {
 .calendar-grid {
     max-width: 800px;
     margin: 0 auto;
+    overflow-x: auto; /* スマホでの横スクロールを防止 */
 }
 
 .calendar-days {
@@ -632,5 +633,59 @@ footer {
     
     .footer-content {
         grid-template-columns: 1fr;
+    }
+    
+    /* カレンダーのモバイル対応 */
+    .calendar-grid {
+        width: 100%;
+        overflow-x: auto; /* スマホでの横スクロールを可能に */
+        -webkit-overflow-scrolling: touch; /* iOSでのスムーズスクロール */
+    }
+    
+    .calendar-days, .calendar-dates {
+        min-width: 500px; /* 最小幅を設定して横スクロールを可能に */
+    }
+    
+    .date {
+        min-width: 40px; /* 日付の最小幅を設定 */
+        height: 40px;
+    }
+    
+    /* カレンダーの代替表示（小さい画面用） */
+    .events-calendar {
+        position: relative;
+    }
+    
+    .events-calendar::after {
+        content: '← スクロールできます →';
+        display: block;
+        text-align: center;
+        padding: 0.5rem;
+        color: var(--primary-color);
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+}
+
+/* さらに小さい画面用の調整 */
+@media (max-width: 480px) {
+    .page-title h2 {
+        font-size: 2rem;
+    }
+    
+    .events-calendar {
+        padding: 1rem;
+    }
+    
+    .calendar-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .event-header h4 {
+        font-size: 1.1rem;
+    }
+    
+    .event-content {
+        padding: 1rem;
     }
 }
