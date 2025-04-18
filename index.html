@@ -5,219 +5,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>雑談なう - 学生のためのDiscordサーバー</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="classroom-bg">
-        <header>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="雑談なう ロゴ">
+                <h1>雑談なう</h1>
+            </div>
             <nav>
-                <div class="logo">
-                    <img src="logo.png" alt="雑談なうロゴ">
-                    <h1>雑談なう</h1>
-                </div>
-                <div class="nav-links">
-                    <a href="#features">特徴</a>
-                    <a href="#community">コミュニティ</a>
-                    <a href="#faq">よくある質問</a>
-                    <a href="#join" class="join-btn">参加する</a>
-                </div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <ul>
+                    <li><a href="index.html" class="active">ホーム</a></li>
+                    <li><a href="events.html">イベント</a></li>
+                    <li><a href="#features">サーバーの特徴</a></li>
+                    <li><a href="#testimonials">みんなの声</a></li>
+                    <li><a href="#announcements">お知らせ</a></li>
+                    <li><a href="#join" class="join-btn">参加する</a></li>
+                </ul>
             </nav>
-        </header>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
 
-        <section class="hero" id="join">
+    <section class="hero">
+        <div class="container">
             <div class="hero-content">
-                <div class="notebook">
-                    <div class="notebook-header">
-                        <h1>雑談なう</h1>
-                    </div>
-                    <div class="notebook-content">
-                        <h2>学生のための<span class="highlight">楽しい</span>Discordコミュニティ</h2>
-                        <p>授業の合間に雑談、勉強の相談、趣味の共有など、<br>学生生活をもっと楽しく！</p>
-                        <a href="https://discord.gg/" class="cta-button">
-                            <img src="discord-icon.svg" alt="Discord" class="discord-icon">
-                            サーバーに参加する
-                        </a>
-                    </div>
-                </div>
+                <h2>ようこそ、<span class="highlight">雑談なう</span>へ！</h2>
+                <p>学生のための楽しい交流スペース。新しい友達を作って、一緒に楽しい時間を過ごしましょう！</p>
+                <a href="#join" class="btn">Discordに参加する</a>
             </div>
             <div class="hero-image">
-                <img src="classroom.svg" alt="オンライン教室のイラスト">
+                <div class="classroom-deco">
+                    <div class="window"></div>
+                    <div class="window"></div>
+                    <div class="plant"></div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="features" id="features">
+    <section id="features" class="features">
+        <div class="container">
             <h2 class="section-title">サーバーの特徴</h2>
             <div class="blackboard">
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon study"></div>
-                        <h3>学習チャンネル</h3>
-                        <p>科目別の学習チャンネルで質問や情報共有ができます。わからない問題も仲間と一緒に解決！</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon events"></div>
-                        <h3>定期イベント</h3>
-                        <p>オンライン勉強会やゲーム大会など、楽しいイベントを開催！新しい友達と出会えるチャンス！</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon voice"></div>
-                        <h3>ボイスチャット</h3>
-                        <p>友達と一緒に勉強したり、雑談したりできる音声チャンネル。一人じゃない、みんなで頑張ろう！</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon roles"></div>
-                        <h3>ロールシステム</h3>
-                        <p>学年や興味に合わせたロールで、自分に関連する情報を受け取れます。自分だけの学校生活を作ろう！</p>
-                    </div>
-                </div>
+                <ul class="feature-list">
+                    <li>
+                        <span class="feature-icon">📚</span>
+                        <div class="feature-content">
+                            <h3>学習サポート</h3>
+                            <p>勉強の質問や相談ができる専用チャンネルがあります。みんなで教え合おう！</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">🎮</span>
+                        <div class="feature-content">
+                            <h3>ゲーム部屋</h3>
+                            <p>人気ゲームの対戦や協力プレイを楽しめるボイスチャンネルを完備！</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">🎵</span>
+                        <div class="feature-content">
+                            <h3>音楽ボット</h3>
+                            <p>高品質な音楽ボットで、みんなで音楽を聴きながら雑談しよう！</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">🏆</span>
+                        <div class="feature-content">
+                            <h3>定期イベント</h3>
+                            <p>季節ごとの特別イベントや、ミニゲーム大会を開催しています！</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="chalk-holder"></div>
+                <div class="eraser"></div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="community" id="community">
+    <section id="testimonials" class="testimonials">
+        <div class="container">
             <h2 class="section-title">みんなの声</h2>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <div class="speech-bubble">
-                        <p>"このサーバーのおかげで、オンライン授業でも友達ができました！毎日ログインするのが楽しみです！"</p>
+            <div class="notebook">
+                <div class="notebook-page">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>「初めは緊張したけど、みんな優しくて居心地がいいです！勉強の相談にもすぐ乗ってくれて助かってます。」</p>
+                            <span class="testimonial-author">- ゆうき（高校2年生）</span>
+                        </div>
                     </div>
-                    <div class="user">
-                        <img src="avatar1.svg" alt="ユーザーアバター">
-                        <span>たなか, 大学1年生</span>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="speech-bubble">
-                        <p>"勉強の質問にすぐ答えてもらえて、テスト対策にとても役立っています。みんな親切で助かります！"</p>
-                    </div>
-                    <div class="user">
-                        <img src="avatar2.svg" alt="ユーザーアバター">
-                        <span>さとう, 高校3年生</span>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>「ゲーム仲間ができて毎日楽しいです！学校の違う友達もできて視野が広がりました。」</p>
+                            <span class="testimonial-author">- みく（大学1年生）</span>
+                        </div>
                     </div>
                 </div>
-                <div class="testimonial">
-                    <div class="speech-bubble">
-                        <p>"趣味が合う友達ができて、毎日ログインするのが楽しみです！学校とは違う交流ができて新鮮です！"</p>
+                <div class="notebook-page">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>「イベントが多くて飽きません。特に季節イベントは毎回楽しみにしています！」</p>
+                            <span class="testimonial-author">- たくや（高校3年生）</span>
+                        </div>
                     </div>
-                    <div class="user">
-                        <img src="avatar3.svg" alt="ユーザーアバター">
-                        <span>すずき, 大学2年生</span>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>「受験勉強で行き詰まった時に相談できる場所があって心強いです。同じ目標を持つ仲間がいるって大事！」</p>
+                            <span class="testimonial-author">- あやか（中学3年生）</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-circle">
-                        <h3>5,000+</h3>
-                    </div>
-                    <p>メンバー</p>
-                </div>
-                <div class="stat">
-                    <div class="stat-circle">
-                        <h3>20+</h3>
-                    </div>
-                    <p>チャンネル</p>
-                </div>
-                <div class="stat">
-                    <div class="stat-circle">
-                        <h3>100+</h3>
-                    </div>
-                    <p>毎日のアクティブユーザー</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="faq" id="faq">
-            <h2 class="section-title">よくある質問</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>参加するには何が必要ですか？</h3>
-                        <span class="arrow"></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Discordアカウントを持っていれば、誰でも参加できます。招待リンクをクリックするだけで簡単に参加できます。</p>
-                    </div>
+    <section id="announcements" class="announcements">
+        <div class="container">
+            <h2 class="section-title">サーバーからのお知らせ</h2>
+            <div class="bulletin-board">
+                <div class="notice">
+                    <div class="notice-date">2025年4月15日</div>
+                    <h3>春の新メンバー歓迎週間開催中！</h3>
+                    <p>新学期が始まり、新しい仲間をたくさん歓迎しています。初心者向けのサーバー案内ツアーも毎日開催中です！</p>
+                    <div class="pin"></div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>どんな学生が参加していますか？</h3>
-                        <span class="arrow"></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>高校生から大学生まで、様々な学年の学生が参加しています。地域も全国各地から集まっています。</p>
-                    </div>
+                <div class="notice">
+                    <div class="notice-date">2025年4月10日</div>
+                    <h3>新しい学習支援チャンネルがオープン！</h3>
+                    <p>英語、数学、理科、社会の教科別チャンネルを新設しました。質問や勉強会の予定を立てるのにご活用ください。</p>
+                    <div class="pin"></div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>サーバーのルールはありますか？</h3>
-                        <span class="arrow"></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>はい、参加者全員が快適に過ごせるよう、基本的なルールがあります。詳細は参加後に確認できます。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>モデレーターはいますか？</h3>
-                        <span class="arrow"></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>はい、経験豊富なモデレーターチームがサーバーを管理し、安全で楽しい環境を維持しています。</p>
-                    </div>
+                <div class="notice">
+                    <div class="notice-date">2025年4月5日</div>
+                    <h3>ゴールデンウィークイベント参加者募集中</h3>
+                    <p>5月のGWには特別イベントを多数企画中！詳細はイベントページをチェックしてください。</p>
+                    <div class="pin"></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="join-section">
-            <div class="join-content">
-                <h2>今すぐコミュニティに参加しよう！</h2>
-                <p>新しい友達との出会い、学習のサポート、楽しいイベントがあなたを待っています。</p>
-                <a href="https://discord.gg/" class="cta-button">
-                    <img src="discord-icon.svg" alt="Discord" class="discord-icon">
-                    Discordサーバーに参加
-                </a>
-            </div>
-        </section>
+    <section id="join" class="join">
+        <div class="container">
+            <h2>今すぐ参加しよう！</h2>
+            <p>新しい友達との出会いがあなたを待っています。</p>
+            <a href="https://discord.gg/zatsudan" class="btn btn-large">Discordサーバーに参加する</a>
+        </div>
+    </section>
 
-        <footer>
+    <footer>
+        <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="logo.png" alt="雑談なうロゴ">
-                    <h2>雑談なう</h2>
+                    <img src="logo.png" alt="雑談なう ロゴ">
+                    <h3>雑談なう</h3>
                 </div>
                 <div class="footer-links">
-                    <div class="link-group">
-                        <h3>リンク</h3>
-                        <a href="#features">特徴</a>
-                        <a href="#community">コミュニティ</a>
-                        <a href="#faq">よくある質問</a>
-                    </div>
-                    <div class="link-group">
-                        <h3>リソース</h3>
-                        <a href="#">ルール</a>
-                        <a href="#">プライバシーポリシー</a>
-                        <a href="#">お問い合わせ</a>
-                    </div>
-                    <div class="link-group">
-                        <h3>SNS</h3>
-                        <a href="#">Twitter</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">YouTube</a>
+                    <h4>リンク</h4>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="events.html">イベント</a></li>
+                        <li><a href="#features">サーバーの特徴</a></li>
+                        <li><a href="#testimonials">みんなの声</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>お問い合わせ</h4>
+                    <p>ご質問やご提案がありましたら、Discordサーバー内の「お問い合わせ」チャンネルまでお気軽にどうぞ。</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
                     </div>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 雑談なう. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 雑談なう All Rights Reserved.</p>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
