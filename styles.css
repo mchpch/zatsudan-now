@@ -150,50 +150,164 @@ nav ul li a.active {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.window {
-    width: 80%;
-    height: 300px;
+/* ノートブックとペンのスタイル */
+.notebook {
+    width: 300px;
+    height: 350px;
+    position: relative;
+    perspective: 1000px;
+    transition: transform 0.3s ease;
+}
+
+.notebook-page {
+    width: 100%;
+    height: 100%;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(-5deg);
     overflow: hidden;
 }
 
-.window-header {
+.notebook-page::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #ff9999;
+    z-index: 2;
+}
+
+.notebook-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#e6e6e6 1px, transparent 1px);
+    background-size: 100% 30px;
+    z-index: 1;
+}
+
+.notebook-text {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 2rem;
+    color: transparent;
+    z-index: 3;
+    overflow: hidden;
+    border-right: 2px solid var(--primary-color);
+    white-space: nowrap;
+    animation: 
+        typing 4s steps(10) infinite,
+        blink-caret 0.75s step-end infinite;
+    animation-delay: 0.5s;
+}
+
+.pen {
+    position: absolute;
+    top: 70px;
+    left: 60px;
+    width: 200px;
     height: 30px;
-    background-color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
+    transform: rotate(0deg);
+    transform-origin: 0 0;
+    z-index: 4;
+    animation: writing 4s infinite;
 }
 
-.window-header::before {
-    content: '';
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-color: #e74c3c;
-    border-radius: 50%;
-    margin-right: 8px;
+.pen-body {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 160px;
+    height: 15px;
+    background: linear-gradient(90deg, #4a6da7, #3a5a8f);
+    border-radius: 2px;
+    transform: rotate(-5deg);
 }
 
-.window-header::after {
-    content: '';
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-color: #f1c40f;
-    border-radius: 50%;
-    margin-right: 8px;
+.pen-tip {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 5px 0 0 5px;
+    transform: rotate(-5deg);
 }
 
-.window-content {
-    height: calc(100% - 30px);
-    background-color: #f8f9fa;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="2" fill="rgba(0,0,0,0.1)"/></svg>');
-    background-size: 20px 20px;
+/* ペンの書き込みアニメーション */
+@keyframes writing {
+    0% {
+        top: 70px;
+        left: 60px;
+        transform: rotate(0deg);
+    }
+    20% {
+        top: 70px;
+        left: 220px;
+        transform: rotate(0deg);
+    }
+    25% {
+        top: 100px;
+        left: 60px;
+        transform: rotate(0deg);
+    }
+    45% {
+        top: 100px;
+        left: 220px;
+        transform: rotate(0deg);
+    }
+    50% {
+        top: 130px;
+        left: 60px;
+        transform: rotate(0deg);
+    }
+    70% {
+        top: 130px;
+        left: 220px;
+        transform: rotate(0deg);
+    }
+    75% {
+        top: 160px;
+        left: 60px;
+        transform: rotate(0deg);
+    }
+    95% {
+        top: 160px;
+        left: 220px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 70px;
+        left: 60px;
+        transform: rotate(0deg);
+    }
+}
+
+/* ノートブックテキストのタイピングアニメーション */
+@keyframes typing {
+    0% { width: 0; color: transparent; }
+    10% { color: var(--primary-color); }
+    50% { width: 10ch; color: var(--primary-color); }
+    90% { width: 10ch; color: var(--primary-color); }
+    100% { width: 0; color: transparent; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--primary-color); }
 }
 
 /* 黒板セクション */
