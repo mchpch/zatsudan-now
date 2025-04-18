@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>イベント情報 - 雑談なう</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="雑談なう ロゴ">
+    <div class="classroom">
+        <header>
+            <div class="logo-container">
+                <img src="logo.png" alt="雑談なうロゴ" class="logo">
                 <h1>雑談なう</h1>
             </div>
             <nav>
@@ -21,172 +23,166 @@
                     <li><a href="index.html#features">サーバーの特徴</a></li>
                     <li><a href="index.html#testimonials">みんなの声</a></li>
                     <li><a href="index.html#announcements">お知らせ</a></li>
-                    <li><a href="index.html#join" class="join-btn">参加する</a></li>
                 </ul>
             </nav>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <section class="page-title">
-        <div class="container">
-            <h2>開催中・予定イベント</h2>
-            <p>雑談なうで開催中および予定されているイベント情報をご紹介します。</p>
-        </div>
-    </section>
+        <main>
+            <section class="page-title">
+                <h2>開催中・予定のイベント</h2>
+                <p>雑談なうでは、様々なイベントを開催しています。ぜひ参加してください！</p>
+            </section>
 
-    <section class="events">
-        <div class="container">
-            <div class="school-calendar">
-                <h3 class="month-title">2025年4月〜5月のイベント</h3>
-                
-                <div class="event current">
-                    <div class="event-date">
-                        <span class="month">4月</span>
-                        <span class="day">15-22</span>
+            <section class="events-calendar">
+                <div class="calendar-header">
+                    <h3>2025年4月のイベントカレンダー</h3>
+                </div>
+                <div class="calendar-grid">
+                    <!-- カレンダーの表示 -->
+                    <div class="calendar-days">
+                        <div>月</div>
+                        <div>火</div>
+                        <div>水</div>
+                        <div>木</div>
+                        <div>金</div>
+                        <div>土</div>
+                        <div>日</div>
                     </div>
-                    <div class="event-content">
-                        <div class="event-badge">開催中</div>
-                        <h4>春の新メンバー歓迎週間</h4>
-                        <p>新学期の始まりを祝って、新メンバーのための特別イベントを開催中！サーバーツアーやミニゲーム大会、自己紹介タイムなど盛りだくさん。</p>
-                        <div class="event-details">
-                            <span class="event-time">毎日 19:00-21:00</span>
-                            <span class="event-channel">メインボイスチャンネル</span>
+                    <div class="calendar-dates">
+                        <div class="date">1</div>
+                        <div class="date">2</div>
+                        <div class="date">3</div>
+                        <div class="date">4</div>
+                        <div class="date">5</div>
+                        <div class="date event-date" data-event="マインクラフトサーバー開設">6</div>
+                        <div class="date">7</div>
+                        <div class="date">8</div>
+                        <div class="date">9</div>
+                        <div class="date event-date" data-event="勉強応援週間スタート">10</div>
+                        <div class="date">11</div>
+                        <div class="date">12</div>
+                        <div class="date">13</div>
+                        <div class="date">14</div>
+                        <div class="date event-date" data-event="新学期特別イベント">15</div>
+                        <div class="date">16</div>
+                        <div class="date">17</div>
+                        <div class="date">18</div>
+                        <div class="date">19</div>
+                        <div class="date event-date" data-event="ゲーム大会">20</div>
+                        <div class="date">21</div>
+                        <div class="date">22</div>
+                        <div class="date">23</div>
+                        <div class="date">24</div>
+                        <div class="date">25</div>
+                        <div class="date">26</div>
+                        <div class="date event-date" data-event="映画鑑賞会">27</div>
+                        <div class="date">28</div>
+                        <div class="date">29</div>
+                        <div class="date event-date" data-event="ボイスチャット交流会">30</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="current-events">
+                <h3>開催中のイベント</h3>
+                <div class="events-container">
+                    <div class="event-card">
+                        <div class="event-header">
+                            <h4>🌸 新学期特別イベント</h4>
+                            <span class="event-date">4月15日〜4月22日</span>
                         </div>
-                        <a href="#" class="btn btn-small">詳細を見る</a>
-                    </div>
-                </div>
-
-                <div class="event upcoming">
-                    <div class="event-date">
-                        <span class="month">4月</span>
-                        <span class="day">25</span>
-                    </div>
-                    <div class="event-content">
-                        <div class="event-badge">予定</div>
-                        <h4>マインクラフト建築コンテスト</h4>
-                        <p>テーマは「未来の学校」！自分の理想の学校を自由に建築して、みんなで投票します。優勝者には特別ロールと景品をプレゼント！</p>
-                        <div class="event-details">
-                            <span class="event-time">18:00-22:00</span>
-                            <span class="event-channel">ゲームボイスチャンネル</span>
+                        <div class="event-content">
+                            <p>新学期を記念して、新メンバー歓迎会を開催します。自己紹介をして新しい友達を作りましょう！</p>
+                            <ul class="event-details">
+                                <li><strong>場所：</strong> #新学期イベント チャンネル</li>
+                                <li><strong>特典：</strong> 参加者には特別ロールをプレゼント</li>
+                                <li><strong>参加方法：</strong> チャンネルで「参加します！」と書き込むだけ</li>
+                            </ul>
                         </div>
-                        <a href="#" class="btn btn-small">参加登録</a>
                     </div>
-                </div>
 
-                <div class="event upcoming">
-                    <div class="event-date">
-                        <span class="month">4月</span>
-                        <span class="day">30</span>
-                    </div>
-                    <div class="event-content">
-                        <div class="event-badge">予定</div>
-                        <h4>勉強応援ナイト</h4>
-                        <p>テスト期間に向けて、みんなで一緒に勉強する特別イベント。質問し合ったり、モチベーションを高め合いましょう！</p>
-                        <div class="event-details">
-                            <span class="event-time">19:00-22:00</span>
-                            <span class="event-channel">学習支援チャンネル</span>
+                    <div class="event-card">
+                        <div class="event-header">
+                            <h4>📝 勉強応援週間</h4>
+                            <span class="event-date">4月10日〜4月17日</span>
                         </div>
-                        <a href="#" class="btn btn-small">リマインダーを設定</a>
-                    </div>
-                </div>
-
-                <div class="event upcoming">
-                    <div class="event-date">
-                        <span class="month">5月</span>
-                        <span class="day">3-5</span>
-                    </div>
-                    <div class="event-content">
-                        <div class="event-badge">予定</div>
-                        <h4>GWスペシャル：映画鑑賞マラソン</h4>
-                        <p>ゴールデンウィーク特別企画！みんなで選んだ映画を一緒に観る3日間。チャット欄で感想を共有しながら楽しみましょう。</p>
-                        <div class="event-details">
-                            <span class="event-time">各日 20:00-23:00</span>
-                            <span class="event-channel">映画鑑賞チャンネル</span>
+                        <div class="event-content">
+                            <p>テスト期間に向けて、みんなで一緒に勉強しましょう！勉強時間を記録して、目標達成者には特典があります。</p>
+                            <ul class="event-details">
+                                <li><strong>場所：</strong> #勉強部屋 チャンネル</li>
+                                <li><strong>特典：</strong> 目標達成者にはAmazonギフトカード抽選</li>
+                                <li><strong>参加方法：</strong> 勉強開始・終了時間をチャンネルに投稿</li>
+                            </ul>
                         </div>
-                        <a href="#" class="btn btn-small">映画リクエスト</a>
                     </div>
                 </div>
+            </section>
 
-                <div class="event upcoming">
-                    <div class="event-date">
-                        <span class="month">5月</span>
-                        <span class="day">10</span>
-                    </div>
-                    <div class="event-content">
-                        <div class="event-badge">予定</div>
-                        <h4>音楽フェスティバル</h4>
-                        <p>DJタイムやカラオケ大会、好きな曲の紹介など、音楽を通じて交流するイベント。音楽好きな人は必見！</p>
-                        <div class="event-details">
-                            <span class="event-time">19:00-22:00</span>
-                            <span class="event-channel">音楽チャンネル</span>
+            <section class="upcoming-events">
+                <h3>今後のイベント</h3>
+                <div class="events-container">
+                    <div class="event-card">
+                        <div class="event-header">
+                            <h4>🎮 ゲーム大会</h4>
+                            <span class="event-date">4月20日 19:00〜</span>
                         </div>
-                        <a href="#" class="btn btn-small">プレイリスト登録</a>
+                        <div class="event-content">
+                            <p>人気ゲーム「Among Us」の大会を開催します！チームに分かれて対戦しましょう。</p>
+                            <ul class="event-details">
+                                <li><strong>場所：</strong> #ゲーム大会 チャンネル</li>
+                                <li><strong>特典：</strong> 優勝チームには特別ロールと称号</li>
+                                <li><strong>参加方法：</strong> 4月18日までに参加フォームに記入</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-header">
+                            <h4>🎬 映画鑑賞会</h4>
+                            <span class="event-date">4月27日 20:00〜</span>
+                        </div>
+                        <div class="event-content">
+                            <p>みんなで一緒に映画を観ましょう！今回は「君の名は。」を上映します。</p>
+                            <ul class="event-details">
+                                <li><strong>場所：</strong> #映画鑑賞会 チャンネル</li>
+                                <li><strong>準備：</strong> Netflixのアカウントがあると便利です</li>
+                                <li><strong>参加方法：</strong> 当日チャンネルに集合するだけ</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-header">
+                            <h4>🎤 ボイスチャット交流会</h4>
+                            <span class="event-date">4月30日 18:00〜</span>
+                        </div>
+                        <div class="event-content">
+                            <p>ボイスチャットで交流しましょう！初参加の方も大歓迎です。</p>
+                            <ul class="event-details">
+                                <li><strong>場所：</strong> 雑談ボイスチャンネル</li>
+                                <li><strong>内容：</strong> 自己紹介、フリートーク、簡単なゲーム</li>
+                                <li><strong>参加方法：</strong> 当日ボイスチャンネルに参加するだけ</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="event-calendar">
-                <h3>年間イベントカレンダー</h3>
-                <div class="calendar-wrapper">
-                    <div class="calendar-item">
-                        <h4>春（4月-6月）</h4>
-                        <ul>
-                            <li>新メンバー歓迎週間</li>
-                            <li>春の遠足（ゲーム内ツアー）</li>
-                            <li>梅雨の季節イベント</li>
-                        </ul>
-                    </div>
-                    <div class="calendar-item">
-                        <h4>夏（7月-9月）</h4>
-                        <ul>
-                            <li>夏休み特別企画</li>
-                            <li>サマーフェスティバル</li>
-                            <li>勉強合宿（オンライン）</li>
-                        </ul>
-                    </div>
-                    <div class="calendar-item">
-                        <h4>秋（10月-12月）</h4>
-                        <ul>
-                            <li>ハロウィンパーティー</li>
-                            <li>文化祭（創作発表会）</li>
-                            <li>冬休み前テスト対策</li>
-                        </ul>
-                    </div>
-                    <div class="calendar-item">
-                        <h4>冬（1月-3月）</h4>
-                        <ul>
-                            <li>新年会</li>
-                            <li>バレンタインイベント</li>
-                            <li>春休み特別企画</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <section class="event-suggestion">
+                <h3>イベントのリクエスト</h3>
+                <p>開催してほしいイベントがあれば、ぜひリクエストしてください！</p>
+                <a href="#" class="suggestion-button">イベントをリクエストする</a>
+            </section>
+        </main>
 
-    <section class="event-proposal">
-        <div class="container">
-            <h3>イベントの提案をしよう！</h3>
-            <p>「こんなイベントがあったら楽しいな」というアイデアがあれば、ぜひ教えてください！</p>
-            <a href="#" class="btn">イベントを提案する</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
+        <footer>
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="logo.png" alt="雑談なう ロゴ">
-                    <h3>雑談なう</h3>
+                    <img src="logo.png" alt="雑談なうロゴ" class="logo-small">
+                    <p>雑談なう</p>
                 </div>
                 <div class="footer-links">
-                    <h4>リンク</h4>
+                    <h3>リンク</h3>
                     <ul>
                         <li><a href="index.html">ホーム</a></li>
                         <li><a href="events.html">イベント</a></li>
@@ -195,19 +191,15 @@
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4>お問い合わせ</h4>
-                    <p>ご質問やご提案がありましたら、Discordサーバー内の「お問い合わせ」チャンネルまでお気軽にどうぞ。</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">Instagram</a>
-                    </div>
+                    <h3>お問い合わせ</h3>
+                    <p>何か質問があれば、Discordサーバー内の #お問い合わせ チャンネルまでお気軽にどうぞ。</p>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="copyright">
                 <p>&copy; 2025 雑談なう All Rights Reserved.</p>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
