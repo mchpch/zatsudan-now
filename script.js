@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     // イベントカレンダーの日付をクリックしたときの処理
     const eventDates = document.querySelectorAll('.event-date');
-    if (eventDates) {
+    if (eventDates.length > 0) {
         eventDates.forEach(date => {
             date.addEventListener('click', function() {
                 const eventName = this.getAttribute('data-event');
-                alert(`${eventName}が予定されています！詳細は下のイベント一覧をご確認ください。`);
+                if (eventName) {
+                    alert(`${eventName}が予定されています！詳細は下のイベント一覧をご確認ください。`);
+                }
             });
         });
     }
@@ -37,15 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
             feature.addEventListener('mouseleave', function() {
                 this.style.boxShadow = 'none';
             });
-        });
-    }
-
-    // イベント提案フォームのモーダル
-    const suggestionButton = document.querySelector('.suggestion-button');
-    if (suggestionButton) {
-        suggestionButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('イベント提案フォームは準備中です。しばらくお待ちください！');
         });
     }
 
@@ -214,9 +207,6 @@ document.addEventListener('DOMContentLoaded', function() {
     body.appendChild(backToTopButton);
     
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            backToTopButton.style.opacity = '1';
-        }  {
         if (window.scrollY > 300) {
             backToTopButton.style.opacity = '1';
         } else {
