@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // イベントカレンダーの日付をクリックしたときの処理
     const eventDates = document.querySelectorAll('.event-date');
     if (eventDates.length > 0) {
         eventDates.forEach(date => {
@@ -12,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ナビゲーションのスムーススクロール
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -28,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 黒板のチョークエフェクト
     const features = document.querySelectorAll('.feature');
     if (features) {
         features.forEach(feature => {
@@ -42,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ページ読み込み時のアニメーション
     const animateElements = document.querySelectorAll('.hero-content, .feature, .testimonial, .announcement, .event-card');
     if (animateElements) {
         animateElements.forEach((element, index) => {
@@ -59,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ロゴのホバーエフェクト
     const logo = document.querySelector('.logo');
     if (logo) {
         logo.addEventListener('mouseenter', function() {
@@ -72,13 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 参加ボタンのクリックイベント
     const joinButtons = document.querySelectorAll('.join-button');
     if (joinButtons) {
         joinButtons.forEach(button => {
             button.addEventListener('click', function(e) {
-                // 実際のDiscordの招待リンクがない場合はアラートを表示
-                if (this.getAttribute('href') === 'https://discord.gg/zatsudan') {
+                if (this.getAttribute('href') === 'https://discord.gg/zatsudan-now') {
                     e.preventDefault();
                     alert('これはデモサイトです。実際のDiscordサーバーは存在しません。');
                 }
@@ -86,10 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // シンプルなノートブックのホバーエフェクト
     const notebook = document.querySelector('.notebook');
     if (notebook) {
-        // ノートブックにホバーしたときのエフェクト
         notebook.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.05)';
             this.style.transition = 'transform 0.3s ease';
@@ -100,11 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 黒板セクションのチョークダストエフェクト
     const blackboard = document.querySelector('.blackboard-section');
     if (blackboard) {
         blackboard.addEventListener('mouseenter', function() {
-            // チョークダストの粒子を作成
             for (let i = 0; i < 5; i++) {
                 const dust = document.createElement('div');
                 dust.className = 'chalk-dust';
@@ -120,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 this.appendChild(dust);
                 
-                // アニメーション終了後に要素を削除
                 setTimeout(() => {
                     dust.remove();
                 }, 3000);
@@ -128,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // チョークダストのアニメーションをCSSに追加
     const style = document.createElement('style');
     style.textContent = `
         @keyframes dust {
@@ -144,9 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    // イベントページのカレンダー機能
     if (document.querySelector('.calendar-dates')) {
-        // 現在の日付をハイライト
         const today = new Date().getDate();
         const dateElements = document.querySelectorAll('.calendar-dates .date');
         
@@ -159,7 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ページスクロール時のヘッダー固定
     const header = document.querySelector('header');
     if (header) {
         window.addEventListener('scroll', function() {
@@ -179,7 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ページトップへ戻るボタン
     const body = document.querySelector('body');
     const backToTopButton = document.createElement('a');
     backToTopButton.textContent = '↑';
@@ -222,7 +205,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 画像の遅延読み込み
     const images = document.querySelectorAll('img');
     if (images.length > 0) {
         const imageOptions = {
