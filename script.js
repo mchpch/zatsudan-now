@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dateElements.forEach(dateEl => {
             if (parseInt(dateEl.textContent) === today) {
                 dateEl.classList.add('today');
-                dateEl.style.backgroundColor = '#e8f4f8';
+                dateEl.style.backgroundColor = '#06c775';
                 dateEl.style.fontWeight = 'bold';
             }
         });
