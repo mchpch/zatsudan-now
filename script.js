@@ -93,12 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ノートブックとペンのアニメーション制御
+    // シンプルなノートブックのホバーエフェクト
     const notebook = document.querySelector('.notebook');
-    const notebookText = document.querySelector('.notebook-text');
-    const pen = document.querySelector('.pen');
-    
-    if (notebook && notebookText && pen) {
+    if (notebook) {
         // ノートブックにホバーしたときのエフェクト
         notebook.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.05)';
@@ -147,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 opacity: 0.7;
             }
             100% {
-                transform: translate(${Math.random() > 0.5 ? '+' : '-'}${Math.random() * 50 + 20}px, ${Math.random() * 50 + 20}px);  > 0.5 ? '+' : '-'}${Math.random() * 50 + 20}px, ${Math.random() * 50 + 20}px);
+                transform: translate(${Math.random() > 0.5 ? '+' : '-'}${Math.random() * 50 + 20}px, ${Math.random() * 50 + 20}px);
                 opacity: 0;
             }
         }
@@ -217,6 +214,9 @@ document.addEventListener('DOMContentLoaded', function() {
     body.appendChild(backToTopButton);
     
     window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopButton.style.opacity = '1';
+        }  {
         if (window.scrollY > 300) {
             backToTopButton.style.opacity = '1';
         } else {
